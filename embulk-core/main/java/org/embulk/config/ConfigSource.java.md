@@ -1,7 +1,7 @@
 ## ConfigSource インターフェース
 
 * 種類: interface
-* 継承: [DataSource](DataSource.java)
+* 継承: [DataSource](DataSource.java.md)
 
 ## メソッド
 
