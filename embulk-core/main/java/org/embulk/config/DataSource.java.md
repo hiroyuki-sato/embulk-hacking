@@ -6,8 +6,9 @@
   * [ConfigSource](ConfigSource.java.md)
   * [ConfigDiff](ConfigDiff.java.md)
   * [TaskReport](TaskReport.java.md)
+      * [CommitReport](CommitReport.java.md)  (@Deprecated)
   * [TaskSource](TaskSource.java.md)
-  
+
 ## メソッド
 
 * List<String> getAttributeNames();

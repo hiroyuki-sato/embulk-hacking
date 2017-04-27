@@ -2,6 +2,8 @@
 
 * 種類: interface
 * 継承: [DataSource](DataSource.java.md)
+* 本インターフェースを継承しているインターフェース
+  * [CommitReport](CommitReport.java.md) (@Deprecated)
 
 ## メソッド
 

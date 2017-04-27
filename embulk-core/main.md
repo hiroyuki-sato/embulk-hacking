@@ -12,40 +12,46 @@
 
 ## config
 
-### Config
+### DataSourceを継承するインターフェース群
+
+- [x] [DataSource.java](main/java/org/embulk/config/DataSource.java.md)
+    - [x] [ConfigDiff.java](main/java/org/embulk/config/ConfigDiff.java.md)
+    - [x] [ConfigSource.java](main/java/org/embulk/config/ConfigSource.java.md)
+    - [x] [TaskReport.java](main/java/org/embulk/config/TaskReport.java.md)
+        - [x] [CommitReport.java](main/java/org/embulk/config/CommitReport.java.md)
+    - [x] [TaskSource.java](main/java/org/embulk/config/TaskSource.java.md)
+
+### アノテーション
 
 - [x] [Config.java](main/java/org/embulk/config/Config.java.md)
 - [x] [ConfigDefault.java](main/java/org/embulk/config/ConfigDefault.java.md)
-- [x] [ConfigDiff.java](main/java/org/embulk/config/ConfigDiff.java.md)
-- [x] [ConfigException.java](main/java/org/embulk/config/ConfigException.java.md)
 - [x] [ConfigInject.java](main/java/org/embulk/config/ConfigInject.java.md)
+
+### Config
+
+- [x] [ConfigException.java](main/java/org/embulk/config/ConfigException.java.md)
 - [ ] ConfigLoader.java
-- [x] [ConfigSource.java](main/java/org/embulk/config/ConfigSource.java.md)
 
 ### DataSource
 
-- [x] [DataSource.java](main/java/org/embulk/config/DataSource.java.md)
 - [ ] DataSourceImpl.java
 - [ ] DataSourceSerDe.java
 
 ### Tasks
 
-- [x] (Task.java)[main/java/org/embulk/config/Task.java.md]
+- [x] [Task.java](main/java/org/embulk/config/Task.java.md)
 - [ ] TaskInvocationHandler.java
-- [ ] TaskReport.java
 - [ ] TaskSerDe.java
-- [ ] TaskSource.java
-- [ ] TaskValidationException.java
 - [ ] TaskValidator.java
 
 ### Exception
 
+- [ ] TaskValidationException.java
 - [x] [UserDataException.java](main/java/org/embulk/config/UserDataException.java.md)
-* UserDataExceptions.java
+- [ ] UserDataExceptions.java
 
 ### Others
 
-* CommitReport.java
 * GenericTypeReference.java
 * ModelManager.java
 * YamlTagResolver.java
