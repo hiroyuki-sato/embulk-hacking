@@ -14,19 +14,19 @@
 
 ### Config
 
-* Config.java
-* ConfigDefault.java
-* ConfigDiff.java
-* ConfigException.java
-* ConfigInject.java
-* ConfigLoader.java
-* ConfigSource.java
+- [ ] Config.java
+- [ ] ConfigDefault.java
+- [x] [ConfigDiff.java](src/main/java/org/embulk/config/ConfigDiff.java.md)
+- [ ] ConfigException.java
+- [ ] ConfigInject.java
+- [ ] ConfigLoader.java
+- [x] [ConfigSource.java](src/main/java/org/embulk/config/ConfigSource.java.md)
 
 ### DataSource
 
-* DataSource.java
-* DataSourceImpl.java
-* DataSourceSerDe.java
+- [x] [DataSource.java](src/main/java/org/embulk/config/DataSource.java.md)
+- [ ] DataSourceImpl.java
+- [ ] DataSourceSerDe.java
 
 ### Tasks
 
