@@ -30,13 +30,13 @@
 
 ### Tasks
 
-* Task.java
-* TaskInvocationHandler.java
-* TaskReport.java
-* TaskSerDe.java
-* TaskSource.java
-* TaskValidationException.java
-* TaskValidator.java
+- [x] (Task.java)[main/java/org/embulk/config/Task.java.md]
+- [ ] TaskInvocationHandler.java
+- [ ] TaskReport.java
+- [ ] TaskSerDe.java
+- [ ] TaskSource.java
+- [ ] TaskValidationException.java
+- [ ] TaskValidator.java
 
 ### Exception
 
