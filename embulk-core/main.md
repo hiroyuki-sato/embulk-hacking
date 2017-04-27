@@ -18,7 +18,7 @@
 - [x] [ConfigDefault.java](main/java/org/embulk/config/ConfigDefault.java.md)
 - [x] [ConfigDiff.java](main/java/org/embulk/config/ConfigDiff.java.md)
 - [x] [ConfigException.java](main/java/org/embulk/config/ConfigException.java.md)
-- [ ] ConfigInject.java
+- [x] [ConfigInject.java](main/java/org/embulk/config/ConfigInject.java.md)
 - [ ] ConfigLoader.java
 - [x] [ConfigSource.java](main/java/org/embulk/config/ConfigSource.java.md)
 
