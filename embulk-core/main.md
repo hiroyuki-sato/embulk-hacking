@@ -17,7 +17,7 @@
 - [x] [Config.java](main/java/org/embulk/config/Config.java.md)
 - [x] [ConfigDefault.java](main/java/org/embulk/config/ConfigDefault.java.md)
 - [x] [ConfigDiff.java](main/java/org/embulk/config/ConfigDiff.java.md)
-- [ ] ConfigException.java
+- [x] [ConfigException.java](main/java/org/embulk/config/ConfigException.java.md)
 - [ ] ConfigInject.java
 - [ ] ConfigLoader.java
 - [x] [ConfigSource.java](main/java/org/embulk/config/ConfigSource.java.md)
@@ -40,7 +40,7 @@
 
 ### Exception
 
-* UserDataException.java
+- [x] [UserDataException.java](main/java/org/embulk/config/UserDataException.java.md)
 * UserDataExceptions.java
 
 ### Others
