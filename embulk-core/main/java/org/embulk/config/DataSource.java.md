@@ -2,6 +2,9 @@
 
 * 種類: interface
 * 継承: なし
+* 本インターフェースを継承しているインターフェース
+  * [ConfigSource](ConfigSource.java.md)
+  * [ConfigDiff](ConfigDiff.java.md)
 
 ## メソッド
 
