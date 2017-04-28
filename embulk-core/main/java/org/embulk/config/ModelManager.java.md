@@ -22,3 +22,10 @@
 * JsonNode writeObjectAsJsonNode(Object v)
 * ObjectNode writeObjectAsObjectNode(Object v)
 * <T> T getInjectedInstance(Class<T> type)
+
+
+### Memo
+
+* [Apache BVal](http://bval.apache.org/index.html)
+* [Jackson](https://github.com/FasterXML/jackson-databind)
+* [Google Guice](https://github.com/google/guice)
