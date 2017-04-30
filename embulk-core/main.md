@@ -56,7 +56,7 @@
 
 ### Others
 
-* GenericTypeReference.java
+- [x] [GenericTypeReference.java](main/java/org/embulk/config/GenericTypeReference.java.md)
 - [ ] [ModelManager.java](main/java/org/embulk/config/ModelManager.java.md)
     * コンストラクタインジェクション?が使われている(@Inject)
 * YamlTagResolver.java
