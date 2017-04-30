@@ -38,7 +38,6 @@
 
 ### Config
 
-- [x] [ConfigException.java](main/java/org/embulk/config/ConfigException.java.md)
 - [ ] ConfigLoader.java
 
 
@@ -50,7 +49,8 @@
 
 ### Exception
 
-- [ ] TaskValidationException.java
+- [x] [ConfigException.java](main/java/org/embulk/config/ConfigException.java.md) (implment [UserDataException.java](main/java/org/embulk/config/UserDataException.java.md))
+    - [x] [TaskValidationException.java](main/java/org/embulk/config/UserDataException.java.md)
 - [x] [UserDataException.java](main/java/org/embulk/config/UserDataException.java.md)
 - [ ] UserDataExceptions.java
 
