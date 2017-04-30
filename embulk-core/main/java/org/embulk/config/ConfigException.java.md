@@ -4,6 +4,8 @@
 * 継承: [RuntimeException](https://docs.oracle.com/javase/jp/8/docs/api/java/lang/RuntimeException.html)
 * インターフェースの実装
   * [UserDataException](UserDataException.java.md)
+* このクラスを継承するクラス
+  * [TaskValidationException.java](TaskValidationException.java.md)
 
 ## 概要
 
