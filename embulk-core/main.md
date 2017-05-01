@@ -45,7 +45,7 @@
 
 - [x] [Task.java](main/java/org/embulk/config/Task.java.md)
 - [ ] TaskInvocationHandler.java
-- [ ] TaskValidator.java
+- [x] [TaskValidator.java](main/java/org/embulk/config/TaskValidator.java.md)
 
 ### Exception
 
