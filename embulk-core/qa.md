@@ -11,3 +11,5 @@
     * com.fasterxml.jackson.databind.node.ObjectNode;
     * com.fasterxml.jackson.databind.node.ArrayNode;
     * com.fasterxml.jackson.databind.node.JsonNodeFactory;    
+- [ ] Jackson ObjectMapper.registerModule
+    * [[Jackson]特定の型に対してカスタムなシリアライザを設定する](http://se-bikou.blogspot.jp/2016/03/jackson.html)
