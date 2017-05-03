@@ -27,3 +27,56 @@
     * TaskSerializer
 * com.fasterxml.jackson.databind.module.SimpleModule
     * TaskSerializerModule
+
+
+## Memo
+
+
+TaskSerDe.TaskSerializerの中の`serialize`というメソッドの中に
+
+`jgen.writeStartObject()`, `jgen.writeEndObject()`というメソッドがある
+
+https://github.com/FasterXML/jackson-databind#5-minute-tutorial-streaming-parser-generator
+
+このURLの中の`{"message":"Hello world!"}`とするところが次のようになっている。
+
+```java
+g.writeStartObject();
+g.writeStringField("message", "Hello world!");
+g.writeEndObject();
+```
+
+このメソッドは、`jgen.writeStartObject()`, `jgen.writeEndObject()`は一緒だが、
+
+`writeStringField`の代わりに次のようなものを使っている。
+
+```java
+jgen.writeFieldName(pair.getKey());
+nestedObjectMapper.writeValue(jgen, pair.getValue());
+```
+
+```java
+public void serialize(Task value, JsonGenerator jgen, SerializerProvider provider)
+        throws IOException
+{
+    if (value instanceof Proxy) {
+        Object handler = Proxy.getInvocationHandler(value);
+        if (handler instanceof TaskInvocationHandler) {
+            TaskInvocationHandler h = (TaskInvocationHandler) handler;
+            Map<String, Object> objects = h.getObjects();
+            jgen.writeStartObject();
+            for (Map.Entry<String, Object> pair : objects.entrySet()) {
+                if (h.getInjectedFields().contains(pair.getKey())) {
+                    continue;
+                }
+                jgen.writeFieldName(pair.getKey());
+                nestedObjectMapper.writeValue(jgen, pair.getValue());
+            }
+            jgen.writeEndObject();
+            return;
+        }
+    }
+    // TODO exception class & message
+    throw new UnsupportedOperationException("Serializing Task is not supported");
+}
+```
