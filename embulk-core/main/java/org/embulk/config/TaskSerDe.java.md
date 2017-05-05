@@ -123,3 +123,18 @@ protected JsonDeserializer<?> newTaskDeserializer(Class<?> raw)
     return new TaskDeserializer(nestedObjectMapper, model, raw);
 }
 ```
+
+[アノテーションによる抑止](http://www.ne.jp/asahi/hishidama/home/tech/java/supwarn.html)
+
+`unchecked`
+
+型引数を使ったキャストは、実行時には型チェックされない。
+つまり右の例だと、「Class<Date> c = strClass();」ではコンパイルエラーにも警告にもならないし実行も通る（実際に返ってきているのはClass<String>だが、チェックされない）。
+しかし「Data d = c.newInstance();」でキャストの例外が発生する。
+
+```
+@SuppressWarnings("unchecked")
+static <T> Class<T> strClass() {
+  return (Class<T>)"".getClass();
+}
+```
