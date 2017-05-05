@@ -80,3 +80,46 @@ public void serialize(Task value, JsonGenerator jgen, SerializerProvider provide
     throw new UnsupportedOperationException("Serializing Task is not supported");
 }
 ```
+
+##
+
+[com.fasterxml.jackson.databind.Module](https://fasterxml.github.io/jackson-databind/javadoc/2.7/com/fasterxml/jackson/databind/Module.html)
+
+
+このクラスでは、次のメソッドがabstractとして定義されており、サブクラス内で実装が必要
+* abstract String getModuleName();
+* abstract void setupModule(Moule.SetupContext context)
+* abstract Version
+
+TaskSeDe.TaskDeserializerModuleクラスでは次のような実装をしている。
+
+* getModuleName: "embulk.config.TaskSerDe"を返す。
+* Version: Version.unknownVersion
+
+
+```java
+@Override
+public void setupModule(SetupContext context)
+{
+    context.addDeserializers(new Deserializers.Base() {
+        @Override
+        public JsonDeserializer<?> findBeanDeserializer(JavaType type, DeserializationConfig config,
+                BeanDescription beanDesc) throws JsonMappingException
+        {
+            Class<?> raw = type.getRawClass();
+            if (Task.class.isAssignableFrom(raw)) {
+                return newTaskDeserializer(raw);
+            }
+            return super.findBeanDeserializer(type, config, beanDesc);
+        }
+    });
+}
+```
+
+```java
+@SuppressWarnings("unchecked")
+protected JsonDeserializer<?> newTaskDeserializer(Class<?> raw)
+{
+    return new TaskDeserializer(nestedObjectMapper, model, raw);
+}
+```
