@@ -26,6 +26,28 @@
 * private ExecSession(Injector injector, Timestamp transactionTime, Optional<ILoggerFactory> loggerFactory)
 * private ExecSession(ExecSession copy, boolean preview)
 
+一般的に次のように利用される。
+
+
+embulk-core/src/main/java/org/embulk/EmbulkEmbed.java
+
+```java
+return ExecSession.builder(injector).fromExecConfig(execConfig).build();
+```
+
+embulk-core/src/main/java/org/embulk/exec/BulkLoader.java
+```java
+ExecSession exec = ExecSession.builder(injector).fromExecConfig(resume.getExecSessionConfigSource()).build();
+```
+
+embulk-core/src/test/java/org/embulk/EmbulkTestRuntime.java
+
+```java
+this.exec = ExecSession.builder(injector).fromExecConfig(execConfig).build();
+```
+
+
+
 
 ## メソッド
 
